@@ -36,11 +36,11 @@ imageView.image = nil; // This is magic to reset status
 imageView.image = tempImage;
 ```
 
-This looks strange and increate your codebase's complexity. But until Apple fix this issue, I have no any idea to solve the problem.
+This looks strange and increase your codebase's complexity. But until Apple fix this issue, I have no any idea to solve the problem.
 
 ### My Idea
 
-I think this behavior changes is not a designed behavior. Because for many cases, like using network images, the imageView's frame can not be determined until the image instance is available (download from network), many users preferres to use image's size to adjust their imageView after image available. This break current third party framework's logic, including [SDWebImage](https://github.com/SDWebImage/SDWebImage) and [Kingfisher](https://github.com/onevcat/Kingfisher).
+I think this behavior changes is not a designed behavior. Because for many cases, like using network images, the imageView's frame can not be determined until the image instance is available (download from network), many users prefer to use image's size to adjust their imageView after image available. This break current third party framework's logic, including [SDWebImage](https://github.com/SDWebImage/SDWebImage) and [Kingfisher](https://github.com/onevcat/Kingfisher).
 
 I think a better solution to handle both the performance and behavior, can use the following logic (just my idea, UIKit team can have a better solution).
 
