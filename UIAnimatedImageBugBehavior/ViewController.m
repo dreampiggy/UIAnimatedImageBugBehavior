@@ -41,8 +41,8 @@
     self.imageView2.image = image;
     self.imageView2.frame = CGRectMake(200, 0, 200, 200);
     
-    self.imageView2.image = nil;
-    self.imageView2.image = image;
+//    self.imageView2.image = nil; // This tricky code solve the issue
+//    self.imageView2.image = image;
 }
 
 
