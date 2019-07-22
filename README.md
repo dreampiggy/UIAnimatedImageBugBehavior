@@ -46,5 +46,5 @@ I think a better solution to handle both the performance and behavior, can use t
 
 1. When user set an animated image on imageView which is not showing at all (frame == zero, or hidden == YES, or alpha == 0.0, all the cases), do not play animation
 2. Once the user make this imageView appear (frame != zero, hidden == NO, alpha > 0.0), we should immediately play animation
-3. This `animation` status should not be visible to user, which means even (frame == zeoo, etc), the `isAnimating` property should still report the correct value as previous iOS firmware.
+3. This internal animation status should not be visible to user, which means even (frame == zero), the `isAnimating` or any public API's property should still report the correct value as previous iOS verion's behavior.
 
